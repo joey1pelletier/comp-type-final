@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react'
 
 function TextFade() {
     const line1 = "Lorem ipsum yo mama";
-    const line2 = "elon musk + pronatalism = uncomprehendable demise to our society";
+    const line2 = "baaaaaaaaaaaaaaaaaaaaaaaa";
     const sentence = {
         hidden: { opacity: 1 },
         visible: {
