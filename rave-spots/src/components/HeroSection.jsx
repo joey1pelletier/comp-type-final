@@ -9,7 +9,7 @@ function HeroSection() {
                 className="hero-section"
             >
                 {/* <h1><span className="teal">E</span><span className="blue">D</span><span className="pink">M</span>SPOTS OF DENVER</h1> */}
-                <h1 className="gradient">EDM SPOTS OF DENVER</h1>
+                <h1 className="gradient">EDM SPOTS OF COLORADO</h1>
                 <div className="arrow-body">
                 <div className="arrow"></div>
                 <div className="arrow"></div>
