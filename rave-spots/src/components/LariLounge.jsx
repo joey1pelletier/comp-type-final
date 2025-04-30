@@ -1,21 +1,75 @@
 import '../App.css'
-import { motion } from "motion/react"
+import { motion, useInView} from "motion/react"
+import { useRef, useEffect } from 'react'
 
 function LariLounge() {
+    const lari_title = "larimer lounge";
+    const sentence = {
+        hidden: { opacity: 1 },
+        visible: {
+            opacity: 1,
+            transition: {
+                delay: 1,
+                staggerChildren: 0.08,
+            },
+        },
+    }
+
+    const letter = {
+        hidden: { opacity: 0, y: 50 },
+        visible: {
+            opacity: 1,
+            y: 0,
+        },
+    }
+
+    const ref = useRef(null);
+    const isInView = useInView(ref, {
+        amount: "2",
+    });
+
+    useEffect(() => {
+        console.log(`the element ${isInView ? "is" : "is NOT"} in view`)
+    }, [isInView]);
     return (
         <>
-        <div className="lari-lounge">
-            <motion-div
+        <div className="lari-lounge" ref={ref}>
+            <motion.div
                 className="lari-lounge-header"
+                variants={sentence}
+                initial="hidden"
+                animate={isInView ? "visible" : "hidden"} 
             >
-                <h2>larimer lounge</h2>
+                <h2>
+                {lari_title.split("").map((char, index) => {
+                return (
+                    <motion.span
+                        key={char + "-" + index}
+                        variants={letter}
+                    >
+                        {char}
+                    </motion.span>
+                )
+            })
+
+            }
+                </h2>
                 
-            </motion-div>
+            </motion.div>
 
             <motion.div
                 className="lari-lounge-text"
+                initial={{
+                    clipPath: 'inset(0 100% 0 0)',
+                }}
+                animate={{ 
+                    clipPath: isInView ? 'inset(0 0% 0 0)' : 'inset(0 100% 0 0)'
+                }}
+                transition={{
+                    duration: 1, ease: 'easeOut'
+                }}
             >
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id varius enim, eu tincidunt dolor. Vestibulum quis nunc efficitur, fringilla nulla et, scelerisque ligula. Interdum et malesuada fames ac ante ipsum primis in faucibus. Duis interdum finibus nunc, vitae mollis elit tempus a. Vestibulum ante ipsum primis in faucibus orci.</p>
+                <p>On weekends, Larimer Lounge's house EDM scene blends underground energy with intimate vibes. Local and touring DJs spin deep, chill, and tech house beats in a raw, indie-style venue that draws Denver’s EDM lovers for late-night movement and connection.</p>
             </motion.div>
         </div>
         </>
