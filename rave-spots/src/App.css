@@ -8,6 +8,7 @@
 
 body {
     overflow-x: hidden;
+    background-color: black;
 }
 
 
@@ -21,7 +22,7 @@ body {
 
 h1 {
     position: relative;
-    top: 40%;
+    top: 35%;
     font-family: 'Abel', sans-serif;
     color: white;
     display: flex;
