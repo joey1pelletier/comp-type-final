@@ -74,7 +74,7 @@ h1 {
     height: 10em;
     width: 10em;
     top: 50%;
-    left: 45%;
+    left: 45.5%;
  }
 
 .arrow {
@@ -113,7 +113,7 @@ h1 {
 
 
 .red-rocks {
-    height: 60em;
+    height: 65em;
     background-position: 60% 40%;
     background-repeat: no-repeat;
     background-image: url('assets/red_rocks.jpg');
@@ -128,7 +128,7 @@ h1 {
     font-style: italic;
     position: relative;
     left: 62%;
-    top: 5%;
+    top: 10%;
     width: 10em;
     font-size: 5em;
 }
@@ -141,11 +141,11 @@ h1 {
     width: 25em;
     line-height: 1.5em;
     margin-left: 1em;
-    margin-top: 2em;
+    margin-top: 3em;
 }
 
 .lari-lounge {
-    height: 60em;
+    height: 65em;
     background-color: aqua;
     background-position: 60% 40%;
     background-repeat: no-repeat;
@@ -172,5 +172,37 @@ h1 {
     font-size: 3em;
     margin-top: 3em;
     margin-left: 1.8em;
+    line-height: 1.5em;
+}
+
+.black-box {
+    height: 70em;
+    background-position: 75% 40%;
+    background-repeat: no-repeat;
+    background-image: url('assets/black_box.jpg');
+    background-color: rgba(0,0,0,0.7);
+    background-blend-mode: darken;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.black-box-header {
+    font-family: 'Cutive', serif;
+    color: white;
+    text-align: center;
+    font-size: 3em;
+    width: 10em;
+    padding-top: 2em;
+}
+
+.black-box-text {
+    font-family: 'Cutive Mono', serif;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    width: 30em;
+    padding: 2em;
     line-height: 1.5em;
 }

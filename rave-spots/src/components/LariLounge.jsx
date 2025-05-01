@@ -66,10 +66,10 @@ function LariLounge() {
                     clipPath: isInView ? 'inset(0 0% 0 0)' : 'inset(0 100% 0 0)'
                 }}
                 transition={{
-                    duration: 1, ease: 'easeOut'
+                    duration: 1.5, ease: 'easeOut'
                 }}
             >
-                <p>On weekends, Larimer Lounge's house EDM scene blends underground energy with intimate vibes. Local and touring DJs spin deep, chill, and tech house beats in a raw, indie-style venue that draws Denver’s EDM lovers for late-night movement and connection.</p>
+                <p>On weekends, Larimer Lounge's house EDM scene blends underground energy with chic vibes. Local and touring DJs spin deep, chill, and tech house beats in a raw, indie-style venue that draws Denver’s EDM lovers for late-night movement and connection.</p>
             </motion.div>
         </div>
         </>
